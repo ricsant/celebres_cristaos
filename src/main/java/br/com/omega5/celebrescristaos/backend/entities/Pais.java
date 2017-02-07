@@ -1,4 +1,4 @@
-package br.com.omega5.celebrescristaos.frontend.entities;
+package br.com.omega5.celebrescristaos.backend.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

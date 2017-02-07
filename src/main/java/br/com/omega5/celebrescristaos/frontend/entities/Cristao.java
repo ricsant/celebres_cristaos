@@ -15,6 +15,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import br.com.omega5.celebrescristaos.backend.entities.Pais;
+
 @Table(name="TB_CRISTAOS")
 @Entity
 public class Cristao {

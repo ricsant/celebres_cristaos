@@ -5,6 +5,8 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import br.com.omega5.celebrescristaos.backend.entities.Pais;
+
 @ManagedBean
 @ViewScoped
 public class PaisBean {
