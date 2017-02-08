@@ -1,5 +1,14 @@
 package br.com.omega5.celebrescristaos.frontend.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 @Table(name="TB_IGREJAS")
 @Entity
 public class Igreja {
@@ -8,6 +17,15 @@ public class Igreja {
 	@Column(name="ID", nullable=false)
 	@GeneratedValue
 	private Long id;
+	
+	@ManyToOne
+	@JoinColumns({
+			@JoinColumn(name = "ID", referencedColumnName = "ID_DENOMINACAO", nullable = false, insertable = false, updatable = false)
+			})
+	private Denominacao denominacao;
+	
+	@Column(name="ID_DENOMINACAO", nullable=false)
+	private Long idDenominacao;
 	
 	@Column(name="NOME", nullable=false, length=100) 	
 	private String nome;
@@ -37,6 +55,14 @@ public class Igreja {
 
 	public void setWebsite(String website) {
 		this.website = website;
+	}
+
+	public Long getIdDenominacao() {
+		return idDenominacao;
+	}
+
+	public void setIdDenominacao(Long idDenominacao) {
+		this.idDenominacao = idDenominacao;
 	}
 	
 	
